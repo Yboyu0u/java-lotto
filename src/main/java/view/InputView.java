@@ -50,7 +50,7 @@ public class InputView {
 		System.out.println(MANUAL_LOTTO_TICKETS_PURCHASE_MESSAGE);
 
 		List<ManualTicketDto> tickets = new ArrayList<>();
-		for(int i = 0; i<count; i++) {
+		for (int i = 0; i < count; i++) {
 			tickets.add(new ManualTicketDto(getManualLottoTicket()));
 		}
 

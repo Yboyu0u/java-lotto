@@ -44,7 +44,7 @@ public class OutputView {
 		System.out.println(stringBuilder.toString());
 	}
 
-	private static  List<String> makeBallsToStrings(Ticket ticket) {
+	private static List<String> makeBallsToStrings(Ticket ticket) {
 		return ticket.getBalls()
 			.stream()
 			.map(ball -> String.valueOf(ball.getNumber()))
