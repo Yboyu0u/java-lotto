@@ -34,10 +34,18 @@ public enum Rank {
 		int matchCount = ticket.countMatch(winningNumber.getWinningBalls());
 
 		if (matchCount == CONDITION_FOR_CHECK_BONUS_BALL) {
-			return SECOND_GRADE;
+			return checkBonusBall(ticket, winningNumber);
 		}
 
 		return Rank.of(matchCount);
+	}
+
+	private static Rank checkBonusBall(final Ticket ticket, final WinningNumber winningNumber) {
+		if (ticket.contains(winningNumber.getBonusBall())) {
+			return SECOND_GRADE;
+		}
+
+		return THIRD_GRADE;
 	}
 
 	private static Rank of(final int matchCount) {
